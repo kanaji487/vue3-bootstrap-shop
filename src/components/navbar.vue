@@ -9,14 +9,14 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Home</a>
+                        <routerLink to="/" class="nav-link" aria-current="page" href="#">Home</routerLink>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Cart</a>
+                        <routerLink to="/cart" class="nav-link" aria-current="page" href="#">Cart</routerLink>
                     </li>
                 </ul>
                 <div class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" v-model="productStore.input">
                 </div>
             </div>
         </div>
@@ -24,7 +24,9 @@
 </template>
 
 <script setup>
+import { useProductStore } from '../store/product';
 
+const productStore = useProductStore();
 </script>
 
 <style lang="scss" scoped></style>
