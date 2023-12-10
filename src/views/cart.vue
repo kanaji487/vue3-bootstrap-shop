@@ -23,7 +23,7 @@
                 <td>
                     {{ cart.product.title }}
                 </td>
-                <td>{{ currencyUSD(cart.product.price) }} ฿</td>
+                <td>{{ currencyUSD(cart.product.price) }}</td>
                 <td>
                     <button class="btn btn-sm btn-secondary" @click="cartStore.decrementQuantity(index)">-</button>
                     <span class="mx-2">{{ cart.quantity }}</span>
